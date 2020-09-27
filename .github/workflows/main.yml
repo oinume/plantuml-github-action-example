@@ -28,7 +28,7 @@ jobs:
           args: -v -tsvg ${{ steps.getfile.outputs.files }}
 #        uses: docker://oinume/plantuml-github-action:push-docker-image
       - name: Generate PNG Diagrams
-        uses: cloudbees/plantuml-github-action@master
+        uses: ./.github/actions/plantuml-github-action
         with:
           args: -v -tpng ${{ steps.getfile.outputs.files }}
       - name: Push Local Changes

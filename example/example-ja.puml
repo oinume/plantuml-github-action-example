@@ -6,4 +6,5 @@ Alice -> Bob: 新しい認証リクエスト
 Alice <-- Bob: 新しい認証レスポンス
 
 
+
 @enduml
