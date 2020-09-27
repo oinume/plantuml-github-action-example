@@ -25,13 +25,13 @@ jobs:
       - name: Generate SVG Diagrams
         uses: ./.github/actions/plantuml-github-action
         with:
-          args: -charset UTF-8 -v -tsvg ${{ steps.getfile.outputs.files }}
+          args: -v -tsvg ${{ steps.getfile.outputs.files }}
         env:
           LANG: ja_JP.UTF-8
       - name: Generate PNG Diagrams
         uses: ./.github/actions/plantuml-github-action
         with:
-          args: -charset UTF-8 -v -tpng ${{ steps.getfile.outputs.files }}
+          args: -v -tpng ${{ steps.getfile.outputs.files }}
         env:
           LANG: ja_JP.UTF-8
       - name: Push Local Changes
