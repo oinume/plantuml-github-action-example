@@ -25,12 +25,12 @@ jobs:
       - name: Generate SVG Diagrams
         uses: ./.github/actions/plantuml-github-action
         with:
-          args: -v -tsvg ${{ steps.getfile.outputs.files }}
+          args: -charset UTF-8 -v -tsvg ${{ steps.getfile.outputs.files }}
 #        uses: docker://oinume/plantuml-github-action:push-docker-image
       - name: Generate PNG Diagrams
         uses: ./.github/actions/plantuml-github-action
         with:
-          args: -v -tpng ${{ steps.getfile.outputs.files }}
+          args: -charset UTF-8 -v -tpng ${{ steps.getfile.outputs.files }}
       - name: Push Local Changes
         uses:  stefanzweifel/git-auto-commit-action@v4.1.2
         with:
